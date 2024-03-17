@@ -92,7 +92,7 @@ const Folder = ({ id, title, description, createdAt }: FolderProps) => {
       <div className="border-t-2 border-t-gray-300 w-5/6 bg-white flex justify-between rounded-b-md py-2   items-center absolute bottom-1 ">
         <div className="text-black flex flex-col text-xs ">
           {" "}
-          <span className="font-bold"> Created at:</span>{" "}
+          <span className="font-bold"> Created on:</span>{" "}
           <span className="text-xs text-gray-700">{formatDate}</span>{" "}
         </div>
         <Link href={`/dashboard/folder/${id}`}>

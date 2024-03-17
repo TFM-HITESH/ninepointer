@@ -23,7 +23,8 @@ const config = {
 "mokoto":["MOKOTO","regular"],
 "lexand":["Lexend","sans-serif"],
 "rubik":["Rubik","sans-serif"],
-"inter":["Inter","sans-serif"]
+"inter":["Inter","sans-serif"],
+"zen":["Zen Loop", "cursive"],
 
       },
       colors: {

@@ -47,7 +47,7 @@ const Footer = () => {
         </div>
       </div>
       <Separator className="bg-blue-200" />
-      {/* <div className="text-white  flex w-full justify-center p-4 text-center items-center max-w-7xl ">
+      <div className="text-white  flex w-full justify-center p-4 text-center items-center max-w-7xl ">
         <Link
           href="https://github.com/DeadmanAbir/ninepointer-AI"
           target="_blank"
@@ -57,7 +57,7 @@ const Footer = () => {
           <Star className="pr-2 group-hover:fill-yellow-400" /> Star us on
           Github{" "}
         </Link>
-      </div> */}
+      </div>
     </div>
   );
 };

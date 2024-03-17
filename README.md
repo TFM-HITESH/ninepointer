@@ -32,7 +32,6 @@ is tool you can use to chat with youtube videos.Making life easier no need to wa
 - 📄 User can upload video upto 40 minute as an average, based on context window of LLM.
 - 💭User chat history is kept.
 - 📝 Short notes are also generated.
-- 𝕩 Short notes can be shared on twitter.
 - 📝Also a short summary is generated.
 - 🫠 Many more feature are coming...
 
