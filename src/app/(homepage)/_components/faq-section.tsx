@@ -3,7 +3,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components/ui/accordion'
+} from "@/components/ui/accordion";
 const Faq = () => {
   return (
     <div className=" w-full ">
@@ -16,7 +16,7 @@ const Faq = () => {
             value="item-1"
             className="border-none rounded-xl bg-gradient-to-l from-indigo-950 to-gray-900 px-3 "
           >
-            <AccordionTrigger>What is Devscribe.AI?</AccordionTrigger>
+            <AccordionTrigger>What is NinePointer?</AccordionTrigger>
             <AccordionContent>
               Its AI which let you talk to youtube videos and github repos.
             </AccordionContent>
@@ -24,7 +24,7 @@ const Faq = () => {
         </Accordion>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Faq
+export default Faq;

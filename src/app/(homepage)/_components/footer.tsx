@@ -14,7 +14,7 @@ const Footer = () => {
             Transform you knowledge with
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-700">
               {" "}
-              Devscribe
+              NinePointer
             </span>{" "}
           </div>
         </div>
@@ -47,9 +47,9 @@ const Footer = () => {
         </div>
       </div>
       <Separator className="bg-blue-200" />
-      <div className="text-white  flex w-full justify-center p-4 text-center items-center max-w-7xl ">
+      {/* <div className="text-white  flex w-full justify-center p-4 text-center items-center max-w-7xl ">
         <Link
-          href="https://github.com/DeadmanAbir/DevScribe-AI"
+          href="https://github.com/DeadmanAbir/ninepointer-AI"
           target="_blank"
           className="flex bg-gradient-to-b from-slate-800 to-black p-2 rounded-3xl text-white group hover:-translate-y-[2px] transition-transform "
         >
@@ -57,7 +57,7 @@ const Footer = () => {
           <Star className="pr-2 group-hover:fill-yellow-400" /> Star us on
           Github{" "}
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };

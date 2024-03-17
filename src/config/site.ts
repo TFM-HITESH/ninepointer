@@ -1,4 +1,4 @@
 export const siteConfig={
-    name:"DevscribeAI",
+    name:"NinePointer",
     description:"App that let you chat with youtube videos."
 }

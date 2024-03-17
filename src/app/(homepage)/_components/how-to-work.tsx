@@ -2,9 +2,12 @@ import Image from "next/image";
 
 const How = () => {
   return (
-    <div className="md:mt-20  w-full flex flex-col items-center justify-center p-2 max-w-7xl" id="features">
+    <div
+      className="md:mt-20  w-full flex flex-col items-center justify-center p-2 max-w-7xl"
+      id="features"
+    >
       <div className="md:text-5xl text-3xl font-semibold">
-        How does Devscribe work?
+        How does NinePointer work?
       </div>
       <div className="flex md:flex-row flex-col-reverse w-11/12 justify-between mt-10 relative ">
         <div className="  h-96  md:w-full flex items-center justify-center mx-5 md:mx-0">
@@ -69,7 +72,7 @@ const How = () => {
         <div className="bg- md:w-full mx-5 md:px-14 text-black text-2xl ">
           <p>Wait for the process</p>
           <p className="text-base">
-            Devscribe will take a little time for fresh uploads to process
+            NinePointer will take a little time for fresh uploads to process
           </p>
         </div>
       </div>
@@ -77,8 +80,8 @@ const How = () => {
         <div className="bg- md:w-full mx-5 md:px-14 text-black text-2xl ">
           <p>Get automated generated notes and concepts</p>
           <p className="text-base">
-            Play around with the chat interface of Devscribe, which will enable
-            you to get all your doubts resolved.
+            Play around with the chat interface of NinePointer, which will
+            enable you to get all your doubts resolved.
           </p>
         </div>
         <div className="absolute top-0 md:left-1/2 left-0 bg-slate-300 h-full w-[1.5px]"></div>

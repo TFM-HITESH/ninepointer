@@ -45,7 +45,7 @@ export const answerRetrieval = async (
   const recentMessages = await getRecentMessages(fileId);
   const chatHistory = [
     new HumanMessage("Give an introduction of yours."),
-    new AIMessage("Hi, I am Devscribe AI, I will help you with your queries."),
+    new AIMessage("Hi, I am NinePointer, I will help you with your queries."),
     ...recentMessages.map((message: recentMessagesOutput) =>
       !message.isUserMessage
         ? new HumanMessage(message.text as string)
@@ -56,7 +56,7 @@ export const answerRetrieval = async (
   const prompt = ChatPromptTemplate.fromMessages([
     [
       "system",
-      `You are Devscribe AI and online AI assistant. Your'e created by two developers Abir Dutta and Faisal Hussain, answer the user's questions based on the following context: 
+      `You are NinePointer AI, an online AI assistant. You're created by three developers Hitesh Shivkumar, Ravuru Tharun and Shreya Gupta, answer the user's questions based on the following context: 
       -----------------
       {context}
       -----------------
