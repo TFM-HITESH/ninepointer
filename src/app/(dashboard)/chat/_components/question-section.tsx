@@ -1,12 +1,12 @@
-'use client'
-import Image from 'next/image'
-import { PuffLoader } from 'react-spinners'
-import { useState } from 'react'
-import { api } from '@/trpc/react'
-import { Textarea } from '@/components/ui/textarea'
-import Conversation from './chat-conversation'
-import Chats from './chats'
-import { questionProps, Message } from '@/types/chat/chat-types'
+"use client";
+import Image from "next/image";
+import { PuffLoader } from "react-spinners";
+import { useState } from "react";
+import { api } from "@/trpc/react";
+import { Textarea } from "@/components/ui/textarea";
+import Conversation from "./chat-conversation";
+import Chats from "./chats";
+import { questionProps, Message } from "@/types/chat/chat-types";
 const Question = ({ id, collection }: questionProps) => {
   const {
     data: messages,
@@ -14,30 +14,30 @@ const Question = ({ id, collection }: questionProps) => {
     refetch: refetchMessages,
   } = api.chat.getRecentChat.useQuery({
     fileId: id,
-  })
+  });
 
-  const [input, setInput] = useState<string>('')
-  const [isAiThinking, setAiThinking] = useState<boolean>(false)
+  const [input, setInput] = useState<string>("");
+  const [isAiThinking, setAiThinking] = useState<boolean>(false);
 
   const { mutate: createMessage } = api.chat.createMessage.useMutation({
     onSuccess: (result: string) => {
-      refetchMessages()
+      refetchMessages();
     },
     onSettled: () => {
-      setAiThinking(false)
+      setAiThinking(false);
     },
     onError: () => {
-      alert('Error creating message')
-      setAiThinking(false)
+      alert("Error creating message");
+      setAiThinking(false);
     },
-  })
+  });
   const handleSendMessage = async (event: React.FormEvent) => {
-    event.preventDefault()
-    const question = input
-    setInput('')
-    setAiThinking(true)
-    createMessage({ fileId: id, message: question, collection })
-  }
+    event.preventDefault();
+    const question = input;
+    setInput("");
+    setAiThinking(true);
+    createMessage({ fileId: id, message: question, collection });
+  };
   return (
     <div className="md:w-5/12 w-full flex flex-col items-center justify-center relative  shadow-inner">
       <div className="absolute w-9/12 top-8 items-center justify-center shadow-inner">
@@ -57,8 +57,7 @@ const Question = ({ id, collection }: questionProps) => {
             type="submit"
             className="rounded-md z-20 bg-gradient-to-r from-blue-500 to-blue-700 p-2 w-16 absolute right-1 top-[2px] flex items-center justify-center  text-white"
           >
-
-           {isAiThinking? (<PuffLoader color='white' size={25}/>) : ('Ask')}
+            {isAiThinking ? <PuffLoader color="white" size={25} /> : "Ask"}
           </button>
         </form>
       </div>
@@ -72,8 +71,8 @@ const Question = ({ id, collection }: questionProps) => {
                 width={50}
                 height={50}
               />
-              You can ask qustion about your uploaded video and your answer will
-              appear here
+              You can ask qustion about your uploaded lecture and your answer
+              will appear here
             </div>
             <Conversation
               setAiThinking={setAiThinking}
@@ -91,7 +90,7 @@ const Question = ({ id, collection }: questionProps) => {
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Question
+export default Question;

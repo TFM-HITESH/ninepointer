@@ -31,7 +31,7 @@ function Conversation({
           setAiThinking(true);
         }}
       >
-        Summarise the video
+        Summarise the Lecture
       </div>
       <div
         className="bg-gradient-to-b from-slate-100 to-slate-200 cursor-pointer h-16 flex items-center justify-center outline outline-2 outline-blue-400 text-center outline-offset-2 rounded-lg text-xs hover:shadow-lg"
@@ -42,7 +42,7 @@ function Conversation({
           setAiThinking(true);
         }}
       >
-        Key concepts of the video
+        Key concepts of the Lecture
       </div>
       <div
         className="bg-gradient-to-b from-slate-100 to-slate-200 cursor-pointer h-16 flex items-center justify-center outline outline-2 outline-blue-400 text-center  outline-offset-2 rounded-lg text-xs hover:shadow-lg"
@@ -53,7 +53,7 @@ function Conversation({
           setAiThinking(true);
         }}
       >
-        Overview of the video
+        Overview of the Lecture
       </div>
       <div
         className="bg-gradient-to-b from-slate-100 to-slate-200 cursor-pointer h-16 flex items-center justify-center text-center outline outline-2 outline-blue-400 outline-offset-2 rounded-lg text-xs hover:shadow-lg"
@@ -64,7 +64,7 @@ function Conversation({
           setAiThinking(true);
         }}
       >
-        What are the 5 main points of the video
+        What are the 5 main points of the Lecture
       </div>
     </div>
   );
