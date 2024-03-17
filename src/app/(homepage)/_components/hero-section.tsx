@@ -12,8 +12,8 @@ const Hero = () => {
       </div>
 
       <div className="md:text-5xl text-3xl text-black md:text-center text-center font-semibold p-3 ">
-        Chat with videos <br /> Don&apos;t have time to watch full videos?{" "}
-        <br />{" "}
+        Relive your lectures ! <br /> Can&apos;t make it to a lecture ? Working
+        on something else ? <br />{" "}
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-700">
           NinePointer
         </span>{" "}
