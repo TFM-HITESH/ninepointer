@@ -1,0 +1,62 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id     String   @id @unique
+  email  String   @unique
+  Folder Folder[]
+  File  File[]
+}
+
+model Folder {
+  id          String   @id @default(cuid())
+  name        String
+  description String
+  createdAt   DateTime @default(now())
+  user        User     @relation(fields: [userId], references: [id])
+  userId      String
+
+  files File[]
+}
+
+model File {
+  id          String     @id @default(cuid())
+  name        String
+  url         String
+  collection  String //qdrant collection name
+  createdAt   DateTime   @default(now())
+  summary     String     @db.Text()
+  Folder      Folder     @relation(fields: [folderId], references: [id], onDelete: Cascade)
+  folderId    String
+  user       User       @relation(fields: [userId], references: [id])
+  userId     String
+  concepts    Concepts[]
+  message     Message[]
+  title       String
+  description String
+}
+
+model Concepts {
+  id          String @id @default(cuid())
+  concept     String
+  explanation String
+  header      String
+  fileId      String
+  file        File   @relation(fields: [fileId], references: [id], onDelete: Cascade)
+}
+
+model Message {
+  id            String   @id @default(cuid())
+  text          String   @db.Text()
+  createdAt     DateTime @default(now())
+  isUserMessage Boolean
+
+  File   File   @relation(fields: [fileId], references: [id], onDelete: Cascade)
+  fileId String
+}
