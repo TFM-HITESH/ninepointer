@@ -39,10 +39,10 @@ const Hero = () => {
           </Link>
         </div>
       )}
-      <div className="text-white  flex gap-2 rounded-full bg-gradient-to-b from-slate-800 to-black p-3 text-sm items-center">
+      {/* <div className="text-white  flex gap-2 rounded-full bg-gradient-to-b from-slate-800 to-black p-3 text-sm items-center">
         {" "}
         <CreditCard className="h-4 w-4" /> No credit card required
-      </div>
+      </div> */}
     </>
   );
 };
