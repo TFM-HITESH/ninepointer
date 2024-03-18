@@ -30,12 +30,16 @@ const FolderPage = ({ params }: any) => {
         <div className="md:text-2xl font-bold text-xl flex gap-2 ">
           <Link
             href="/dashboard"
-            className="hover:text-blue-600 hover:underline"
+            className="hover:text-blue-600 hover:underline font-salt"
           >
             Folders
           </Link>
-          &gt;
-          <Link href="#" className="hover:text-blue-600 hover:underline">
+          <p className="font-salt">&gt;</p>
+
+          <Link
+            href="#"
+            className="hover:text-blue-600 hover:underline font-salt"
+          >
             Files
           </Link>
         </div>

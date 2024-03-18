@@ -8,11 +8,7 @@ import {
 } from "@/components/ui/table";
 
 import Link from "next/link";
-import {
-  MessagesSquare,
-  Trash2,
-  YoutubeIcon,
-} from "lucide-react";
+import { MessagesSquare, Trash2, YoutubeIcon } from "lucide-react";
 import { ConfirmModal } from "@/components/modals/confirm-modal";
 import { api } from "@/trpc/react";
 import { toast } from "sonner";
@@ -47,7 +43,7 @@ const FileTable = ({ data }: FileTableProps) => {
     <div className="border-2 border-gray-400 w-full rounded-md">
       {data.length === 0 ? (
         <div className="text-center h-40 flex items-center justify-center shadow-xl bg-white rounded-md">
-          👋 Welcome to DevcribeAI create a file
+          👋 Welcome to NinePointer ! Create a file.
         </div>
       ) : (
         <Table className="rounded-md ">
@@ -96,6 +92,3 @@ const FileTable = ({ data }: FileTableProps) => {
 };
 
 export default FileTable;
-
-
-

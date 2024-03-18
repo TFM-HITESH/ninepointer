@@ -30,18 +30,39 @@ const Folder = ({ id, title, description, createdAt }: FolderProps) => {
     },
   });
 
+  const getBorderColor = () => {
+    const colors = [
+      "hover:border-green-600",
+      "hover:border-blue-700",
+      "hover:border-yellow-500",
+      "hover:border-red-700",
+    ];
+    const randomIndex = Math.floor(Math.random() * colors.length);
+    return colors[randomIndex];
+  };
+
   const formatDate = format(createdAt, "d MMM yyyy");
   return (
-    <div className="h-64 w-full bg-white rounded-md flex flex-col items-center justify-center cursor-pointer shadow-xl hover:shadow-2xl relative border-[1px] border-gray-400 mx-auto ">
+    <div
+      className={` font-zen h-64 w-full bg-[#efede6d7] ${getBorderColor()} hover: rounded-xl flex flex-col items-center justify-center cursor-pointer shadow-xl hover:shadow-2xl relative  border-[1.5px] border-b-[0.3rem] hover:border-b-[0.5rem]  hover:border-blue-700 hover:scale-105 transition-all duration-150 ease-in-out border-gray-900 mx-auto hover:-translate-y-2 `}
+    >
       <Sheet>
         <SheetTrigger>
-          <div className="  h-32 w-auto  flex flex-col justify-start items-center">
-            <Image src="/blue-folder.svg" alt="folder" width={50} height={50} />
-            <div className="text-center mt-2 text-black">{title}</div>
+          <div className="  h-40 w-auto  flex flex-col justify-start items-center">
+            <Image
+              src="/black-folder.svg"
+              alt="folder"
+              width={50}
+              height={50}
+              className="hover:scale-110 transition-all duration-150 ease-in-out"
+            />
+            <div className="text-center mt-2 mb-2 text-4xl font-bold text-black">
+              {title}
+            </div>
           </div>
         </SheetTrigger>
 
-        <SheetContent className="bg-white text-black ">
+        <SheetContent className="bg-[#efede6d7] text-black ">
           <SheetHeader>
             <SheetTitle className="flex items-center gap-6   justify-start">
               {" "}
@@ -89,16 +110,18 @@ const Folder = ({ id, title, description, createdAt }: FolderProps) => {
         </SheetContent>
       </Sheet>
 
-      <div className="border-t-2 border-t-gray-300 w-5/6 bg-white flex justify-between rounded-b-md py-2   items-center absolute bottom-1 ">
-        <div className="text-black flex flex-col text-xs ">
+      <div className="border-t-2 border-t-gray-600 w-5/6 bg-[#efede6d7] flex justify-between rounded-b-md py-4   items-center absolute bottom-1 ">
+        <div className="text-black flex hover:scale-105 hover:-translate-y-1 transition-all duration-150 sm:bg-[#adada7b1] md:bg-transparent hover:bg-[#adada7b1] ease-in-out p-1 rounded-lg">
           {" "}
-          <span className="font-bold"> Created on:</span>{" "}
-          <span className="text-xs text-gray-700">{formatDate}</span>{" "}
+          <span className="font-bold text-lg px-1 "> Created on :</span>{" "}
+          <span className="text-lg font-bold text-gray-700 px-1">
+            {formatDate}
+          </span>{" "}
         </div>
         <Link href={`/dashboard/folder/${id}`}>
           <button className="p-[3px] relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg" />
-            <div className="px-4 py-1  bg-white rounded-[6px]  relative group transition duration-200 text-black hover:text-white hover:bg-transparent">
+            {/* <div className="absolute inset-0 bg-black rounded-lg" /> */}
+            <div className="px-4 py-1  bg-black rounded-[6px]  relative group transition-all duration-200 font-bold text-white text-xl  hover:text-white hover:scale-110 border-[0.15rem] hover:-translate-y-1 border-black ">
               Open
             </div>
           </button>

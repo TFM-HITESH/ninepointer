@@ -25,6 +25,8 @@ const config = {
 "rubik":["Rubik","sans-serif"],
 "inter":["Inter","sans-serif"],
 "zen":["Zen Loop", "cursive"],
+"dirt":["Rubik Dirt", "system-ui"],
+"salt":["Rock Salt", "cursive"],
 
       },
       colors: {

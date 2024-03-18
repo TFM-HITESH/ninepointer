@@ -24,20 +24,22 @@ const Dashboard = () => {
     localStorage.setItem("imgUrl", user?.user?.imageUrl as string);
   }
   return (
-    <div className="h-full     flex flex-col md:items-center items-center w-full mx-auto text-black max-w-screen-2xl   ">
+    <div className="h-full flex flex-col md:items-center bg-[#f3f3f3] items-center w-full mx-auto text-black max-w-screen-2xl   ">
       <div className="md:text-4xl text-3xl py-[7px] md:px-3 md:pl-10 px-2 lg:pl-32  flex justify-between w-11/12 items-center ">
-        <div className="md:text-2xl font-bold text-xl">Folders</div>
+        <div className="md:text-2xl font-bold text-xl font-salt mt-2">
+          Folders
+        </div>
 
         {!folderLoading ? (
           <CreateFolderModal />
         ) : (
-          <Skeleton className="h-10 w-40 bg-gray-400 m-[3.7px]" />
+          <Skeleton className="h-10 w-40 bg-gray-700 m-[3.7px]" />
         )}
       </div>
-      <Separator className="bg-gray-400 w-full" />
+      <Separator className="bg-gray-700 rounded-full w-5/6 h-[3px] md:ml-[5%] my-[1%]" />
       {Folders?.length === 0 ? (
         <div className="text-xl text-black mt-10 flex text-center items-center justify-center h-28 bg-white border-2 border-gray-400 rounded-lg shadow-xl md:w-[82%] w-[90%] mx-auto lg:ml-44">
-          👋 Welcome to DevcribeAI create a folder
+          👋 Welcome to NinePointer ! Create a folder.
         </div>
       ) : (
         ""
