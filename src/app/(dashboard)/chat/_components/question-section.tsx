@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import Conversation from "./chat-conversation";
 import Chats from "./chats";
 import { questionProps, Message } from "@/types/chat/chat-types";
+import QuizConversation from "./quiz-conversation";
 const Question = ({ id, collection }: questionProps) => {
   const {
     data: messages,
@@ -42,6 +43,12 @@ const Question = ({ id, collection }: questionProps) => {
     <div className="md:w-5/12 w-full flex flex-col items-center justify-center relative  shadow-inner">
       <div className="absolute w-9/12 top-8 items-center justify-center shadow-inner">
         <form className="w-full flex h-7" onSubmit={handleSendMessage}>
+          <QuizConversation
+            setAiThinking={setAiThinking}
+            fileId={id}
+            collection={collection}
+            refetchMessages={refetchMessages}
+          />
           <Textarea
             placeholder="Ask a question about your upload"
             value={input}

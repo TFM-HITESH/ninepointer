@@ -61,7 +61,7 @@ function CreateFolderModal() {
         <DialogTrigger className="flex items-center justify-center">
           <Button
             variant="open"
-            className=" font-zen font-extrabold text-3xl px-3 h-12 bg-red-500 hover:scale-105 "
+            className=" font-zen font-extrabold text-3xl px-3 h-12 hover:scale-105 "
           >
             <PlusCircle className="h-6 w-6 m-1" />
             <p className="m-1">Create Folder</p>

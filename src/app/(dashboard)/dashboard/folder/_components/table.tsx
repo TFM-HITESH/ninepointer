@@ -47,33 +47,52 @@ const FileTable = ({ data }: FileTableProps) => {
         </div>
       ) : (
         <Table className="rounded-md ">
-          <TableHeader className="bg-slate-200">
+          <TableHeader className="bg-[#efede6d7] font-zen text-2xl text-black">
             <TableRow>
-              <TableHead className="w-[50%]">File name</TableHead>
-              <TableHead> Chat </TableHead>
-              <TableHead>Created At</TableHead>
-              <TableHead>Actions</TableHead>
+              <TableHead className="w-[50%] font-bold text-gray-900">
+                <p className="hover:translate-x-1 transition-all duration-100 ease-in-out">
+                  File name
+                </p>
+              </TableHead>
+              <TableHead className="font-bold text-gray-900">
+                {" "}
+                <p className="hover:translate-x-1 transition-all duration-100 ease-in-out">
+                  Chat
+                </p>{" "}
+              </TableHead>
+              <TableHead className="font-bold text-gray-900">
+                <p className="hover:translate-x-1 transition-all duration-100 ease-in-out">
+                  Created At
+                </p>
+              </TableHead>
+              <TableHead className="font-bold text-gray-900">
+                <p className="hover:translate-x-1 transition-all duration-100 ease-in-out">
+                  Actions
+                </p>
+              </TableHead>
             </TableRow>
           </TableHeader>
 
-          <TableBody className="">
+          <TableBody className="bg-[#fcfbf5f0]">
             {data?.map((file) => (
               <TableRow key={file.id} className="border-t-2 border-gray-400">
-                <TableCell className="flex items-center   gap-1 ">
+                <TableCell className="flex items-center   gap-1 hover:-translate-y-0.5 transition-all duration-100 ease-in-out ">
                   <YoutubeIcon className="text-gray-700" />{" "}
                   <span>{file.name} </span>{" "}
                 </TableCell>
 
-                <TableCell>
+                <TableCell className="hover:-translate-y-0.5 transition-all duration-100 ease-in-out">
                   <Link
                     href={`/chat/${file.id}`}
-                    className="hover:text-blue-700 cursor-pointer"
+                    className="hover:text-blue-700 cursor-pointer transition-all duration-100 ease-in-out"
                   >
                     <MessagesSquare />
                   </Link>
                 </TableCell>
-                <TableCell>{formatDate(file.createdAt)}</TableCell>
-                <TableCell>
+                <TableCell className="hover:-translate-y-0.5 transition-all duration-100 ease-in-out">
+                  {formatDate(file.createdAt)}
+                </TableCell>
+                <TableCell className="hover:-translate-y-0.5 transition-all duration-100 ease-in-out">
                   <ConfirmModal
                     onConfirm={() => {
                       deleteFile({ fileId: file.id });

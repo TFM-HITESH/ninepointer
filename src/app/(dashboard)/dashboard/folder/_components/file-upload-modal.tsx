@@ -87,8 +87,12 @@ function FileUploadModal({ folderId, isFileLoading }: FileUploadModalProps) {
           {isFileLoading ? (
             <Skeleton className="h-10 w-40 bg-gray-400 m-[3.7px]" />
           ) : (
-            <Button variant="open">
-              <PlusCircle className="mr-2 h-4 w-4" /> Create File
+            <Button
+              variant="open"
+              className=" font-zen font-extrabold text-3xl px-3 h-12 hover:scale-105 "
+            >
+              <PlusCircle className="h-6 w-6 m-1" />{" "}
+              <p className="m-1">Create File</p>
             </Button>
           )}
         </DialogTrigger>
