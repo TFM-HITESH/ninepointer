@@ -2,19 +2,67 @@ import { Button } from "@/components/ui/button";
 import { CreditCard } from "lucide-react";
 import Link from "next/link";
 import { auth } from "@clerk/nextjs";
+import BackgroundCircle from "@/components/BackgroundCircle";
 const Hero = () => {
   const { userId }: { userId: string | null } = auth();
   return (
     <>
-      <div className="relative items-center justify-center flex mx-auto">
-        <div className="absolute top-0  w-72 h-72 bg-violet-200 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob"></div>
-        <div className="absolute top-0 -right-16 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply  filter blur-3xl opacity-60 animate-blob"></div>
-      </div>
+      <div className="relative items-center justify-center flex mx-auto"></div>
 
-      <div className="md:text-5xl text-3xl text-black md:text-center text-center font-semibold p-3 ">
+      <BackgroundCircle
+        radius="15%"
+        position={{ top: "55%", left: "25%" }}
+        color="#7F4205"
+        opacity={0.3}
+        blur={120}
+      />
+      <BackgroundCircle
+        radius="20%"
+        position={{ top: "70%", left: "80%" }}
+        color="#824E09"
+        opacity={0.8}
+        blur={170}
+      />
+      <BackgroundCircle
+        radius="20%"
+        position={{ top: "15%", left: "65%" }}
+        color="#824E09"
+        opacity={0.6}
+        blur={140}
+      />
+      <BackgroundCircle
+        radius="20%"
+        position={{ top: "70%", left: "50%" }}
+        color="#824E09"
+        opacity={0.5}
+        blur={150}
+      />
+      <BackgroundCircle
+        radius="10%"
+        position={{ top: "70%", left: "30%" }}
+        color="#a74d11"
+        opacity={1}
+        blur={150}
+      />
+      <BackgroundCircle
+        radius="25%"
+        position={{ top: "50%", left: "30%" }}
+        color="#9F5000"
+        opacity={0.4}
+        blur={120}
+      />
+      <BackgroundCircle
+        radius="45%"
+        position={{ top: "0%", left: "40%" }}
+        color="#a74d11"
+        opacity={0.3}
+        blur={150}
+      />
+
+      <div className="md:text-5xl text-3xl text-black md:text-center text-center font-semibold p-3 z-10 ">
         Relive your lectures ! <br /> Can&apos;t make it to a lecture ? Working
         on something else ? <br />{" "}
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-700">
+        <span className="text-transparent bg-clip-text bg-gradient-to-r font-extrabold hover:scale-105 from-red-600 to-red-900">
           NinePointer
         </span>{" "}
         got you covered.

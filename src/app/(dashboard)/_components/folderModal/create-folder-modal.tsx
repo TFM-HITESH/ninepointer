@@ -80,17 +80,21 @@ function CreateFolderModal() {
                 className="flex flex-col gap-3 mt-5 "
                 onSubmit={handleSubmit(onSubmit)}
               >
-                <div>Name</div>
+                <div className="font-bold text-black font-jakarta">
+                  Subject Name
+                </div>
                 <input
                   {...register("name", { required: "Name is required" })}
                   type="text"
                   placeholder="Name"
-                  className="h-7 p-2 text-black rounded-none outline-2 outline-zinc-600 border-2 border-black"
+                  className="h-8 p-2 text-black rounded-md outline-2 outline-zinc-600 border border-gray-400"
                 />
                 {errors.name && (
                   <div className="text-red-500">{errors.name.message}</div>
                 )}
-                <div>Description</div>
+                <div className="font-bold text-black font-jakarta">
+                  Subject Description
+                </div>
 
                 <input
                   {...register("description", {
@@ -98,7 +102,7 @@ function CreateFolderModal() {
                   })}
                   type="text"
                   placeholder="Description"
-                  className="h-7 p-2 text-black rounded-none outline-2 outline-zinc-600 border-2 border-black"
+                  className="h-8 p-2 text-black rounded-md outline-2 outline-zinc-600 border border-gray-400"
                 />
                 {errors.description && (
                   <div className="text-red-500">
@@ -108,7 +112,7 @@ function CreateFolderModal() {
                 <button
                   disabled={isSubmitting}
                   type="submit"
-                  className="px-8 py-2 rounded-md bg-gradient-to-b from-blue-500 to-blue-600 text-white focus:ring-2 focus:ring-blue-400 hover:shadow-xl transition duration-200"
+                  className="px-8 py-2 rounded-md bg-gradient-to-b bg-yellow-500/60 border border-black hover:scale-105 hover:bg-yellow-500/90 text-black focus:ring-2 focus:ring-blue-400 hover:shadow-xl transition duration-200"
                 >
                   {isSubmitting ? "Creating" : "Create"}
                 </button>

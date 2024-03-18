@@ -1,6 +1,5 @@
-import Navbar from './_components/navbar'
+import Navbar from "./_components/navbar";
 import type { Metadata } from "next";
-
 
 const MarketingPageLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -11,7 +10,7 @@ const MarketingPageLayout = ({ children }: { children: React.ReactNode }) => {
 
       {children}
     </div>
-  )
-}
+  );
+};
 
-export default MarketingPageLayout
+export default MarketingPageLayout;

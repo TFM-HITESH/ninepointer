@@ -80,10 +80,12 @@ function CreateFolderModal() {
             <DialogDescription className="w-full flex flex-col   justify-center mx-auto ">
               <form
                 action=""
-                className="flex flex-col gap-3 mt-5 "
+                className="flex flex-col gap-3 mt-3 "
                 onSubmit={handleSubmit(onSubmit)}
               >
-                <div>Name</div>
+                <div className="font-bold text-black font-jakarta">
+                  Subject Name
+                </div>
                 <input
                   {...register("name", { required: "Name is required" })}
                   type="text"
@@ -93,7 +95,7 @@ function CreateFolderModal() {
                 {errors.name && (
                   <div className="text-red-500">{errors.name.message}</div>
                 )}
-                <div>Description</div>
+                <div>Subject Description</div>
 
                 <input
                   {...register("description", {

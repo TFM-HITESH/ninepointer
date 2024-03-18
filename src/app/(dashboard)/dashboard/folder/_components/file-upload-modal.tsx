@@ -119,26 +119,30 @@ function FileUploadModal({ folderId, isFileLoading }: FileUploadModalProps) {
               <X className="h-5 w-5" />
             </DialogClose>
             <DialogHeader>
-              <div className="text-center text-xl font-semibold">
+              <div className="text-center text-3xl font-semibold font-zen ">
                 Create File
               </div>
               <DialogDescription>
                 <form
                   action=""
-                  className="flex flex-col gap-3 mt-2 "
+                  className="flex flex-col gap-2 mt-2 "
                   onSubmit={handleSubmit(onSubmit)}
                 >
-                  <div>Name</div>
+                  <div className="font-bold text-black font-jakarta">
+                    Lecture Name
+                  </div>
                   <input
                     {...register("name", { required: "Name is required" })}
                     type="text"
                     placeholder="Name"
-                    className="h-7 p-2 text-black rounded-none outline-2 outline-zinc-600 border-2 border-black"
+                    className="h-7 p-2 text-black rounded-md outline-2 outline-zinc-600 border border-gray-400"
                   />
                   {errors.name && (
                     <div className="text-red-500">{errors.name.message}</div>
                   )}
-                  <div>Url</div>
+                  <div className="font-bold text-black font-jakarta">
+                    YouTube URL
+                  </div>
 
                   <input
                     {...register("url", {
@@ -147,7 +151,7 @@ function FileUploadModal({ folderId, isFileLoading }: FileUploadModalProps) {
                     })}
                     type="text"
                     placeholder="Url"
-                    className="h-7 p-2 text-black rounded-none outline-2 outline-zinc-600 border-2 border-black"
+                    className="h-7 p-2 text-black rounded-md outline-2 outline-zinc-600 border border-gray-400"
                   />
                   {errors.url && (
                     <div className="text-red-500">{errors.url.message}</div>
@@ -155,7 +159,7 @@ function FileUploadModal({ folderId, isFileLoading }: FileUploadModalProps) {
                   {errors.url && errors.url.type === "validate" && (
                     <p className="text-red-300">Invalid YouTube URL.</p>
                   )}
-                  <div className="bg-red-700/40  rounded-xl text-xs p-[2px] gap-3 text-left text-black border-[1px] flex items-center border-black">
+                  <div className="bg-red-700/40 mt-4 rounded-xl text-xs p-[2px] gap-3 text-left text-black border-[1px] flex items-center border-black">
                     <InfoIcon className="h-10 w-10" />{" "}
                     <span className="tracking-tighter">
                       {" "}
@@ -168,7 +172,7 @@ function FileUploadModal({ folderId, isFileLoading }: FileUploadModalProps) {
                   <button
                     disabled={isSubmitting}
                     type="submit"
-                    className="px-8 py-2 rounded-md bg-gradient-to-b from-blue-500 to-blue-600 text-white focus:ring-2 focus:ring-blue-400 hover:shadow-xl transition duration-200"
+                    className="px-8 py-2 rounded-md  bg-yellow-500/60 border border-black hover:scale-105 hover:bg-yellow-500/90 text-black focus:ring-2 focus:ring-blue-400 hover:shadow-xl transition-all duration-200 ease-in-out"
                   >
                     {isSubmitting ? "Creating" : "Create"}
                   </button>
