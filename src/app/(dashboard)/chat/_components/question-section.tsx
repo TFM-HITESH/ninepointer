@@ -9,13 +9,12 @@ import Chats from "./chats";
 import { questionProps, Message } from "@/types/chat/chat-types";
 import QuizConversation from "./quiz-conversation";
 const Question = ({ id, collection }: questionProps) => {
-  const {
-    data: messages,
-    isLoading: isMessageLoading,
-    refetch: refetchMessages,
-  } = api.chat.getRecentChat.useQuery({
+  const messages = api.chat.getRecentChat.useQuery({ fileId: id })?.data ?? [];
+  const isMessageLoading =
+    api.chat.getRecentChat.useQuery({ fileId: id })?.isLoading ?? false;
+  const refetchMessages = api.chat.getRecentChat.useQuery({
     fileId: id,
-  });
+  })?.refetch;
 
   const [input, setInput] = useState<string>("");
   const [isAiThinking, setAiThinking] = useState<boolean>(false);
@@ -63,7 +62,7 @@ const Question = ({ id, collection }: questionProps) => {
           </>
         ) : (
           <Chats
-            messages={messages as unknown}
+            messages={messages.slice().reverse() as unknown as Message[]}
             isMessageLoading={isMessageLoading}
             isAiThinking={isAiThinking}
           />
