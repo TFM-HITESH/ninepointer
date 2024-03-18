@@ -16,7 +16,7 @@ export default function Home() {
       {/* <VideoTestimonial /> */}
       {/* <How /> */}
       {/* <ContactUs /> */}
-      {/* <MeetTheCreator /> */}
+      <MeetTheCreator />
       <Banner />
       {/* <Footer /> */}
     </main>
