@@ -8,6 +8,7 @@ import { api } from "@/trpc/react";
 import { Separator } from "@/components/ui/separator";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Folder as FolderTypes } from "@/types/folder/folder-types";
+import BackgroundCircle from "@/components/BackgroundCircle";
 
 const Dashboard = () => {
   const {
@@ -25,6 +26,21 @@ const Dashboard = () => {
   }
   return (
     <div className="h-full flex flex-col md:items-center bg-[#f3f3f3] items-center w-full mx-auto text-black max-w-screen-2xl   ">
+      <BackgroundCircle
+        radius="40%"
+        position={{ top: "65%", left: "75%" }}
+        color="#DBDDE7"
+        opacity={0.6}
+        blur={150}
+      />
+      <BackgroundCircle
+        radius="40%"
+        position={{ top: "50%", left: "0%" }}
+        color="#32e7f7"
+        opacity={0.6}
+        blur={150}
+      />
+
       <div className="md:text-4xl text-3xl py-[7px] md:px-3 md:pl-10 px-2 lg:pl-32  flex justify-between w-11/12 items-center ">
         <div className="md:text-2xl font-bold text-xl font-salt mt-2">
           Folders

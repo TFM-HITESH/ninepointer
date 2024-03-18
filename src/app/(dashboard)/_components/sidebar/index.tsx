@@ -13,7 +13,7 @@ const DashboardSidebar = () => {
   useEffect(() => {}, [pathname]);
   return (
     <>
-      <aside className="fixed hidden left-0 py-3 px-1  text-muted-foreground bg-white h-full shadow-lg  w-28 lg:flex flex-col gap-y-3 items-center">
+      <aside className="fixed z-20 hidden left-0 py-3 px-1  text-muted-foreground bg-white h-full shadow-lg  w-28 lg:flex flex-col gap-y-3 items-center">
         <Link
           href="/"
           className="text-black h-9 w-28 text-center flex justify-center items-center p-2 mt-2 mb-2"
