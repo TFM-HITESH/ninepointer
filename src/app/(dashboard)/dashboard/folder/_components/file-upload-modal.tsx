@@ -154,11 +154,14 @@ function FileUploadModal({ folderId, isFileLoading }: FileUploadModalProps) {
                   {errors.url && errors.url.type === "validate" && (
                     <p className="text-red-300">Invalid YouTube URL.</p>
                   )}
-                  <div className="bg-amber-300  rounded-xl text-xs p-[2px] text-center gap-3 text-black border-[1px] flex items-center border-black">
-                    <InfoIcon className="h-5 w-5" />{" "}
+                  <div className="bg-red-700/40  rounded-xl text-xs p-[2px] gap-3 text-left text-black border-[1px] flex items-center border-black">
+                    <InfoIcon className="h-10 w-10" />{" "}
                     <span className="tracking-tighter">
                       {" "}
-                      beta mode - try to video which has transcription{" "}
+                      <span className="underline">Disclaimer</span> - Please
+                      make sure that you have your faculty's permission to
+                      record their lectures ! We are not responsible for any
+                      action taken.{" "}
                     </span>{" "}
                   </div>
                   <button
