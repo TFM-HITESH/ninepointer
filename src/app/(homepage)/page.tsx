@@ -13,7 +13,7 @@ export default function Home() {
     <main className="flex pt-36  flex-col items-center justify-center bg-gradient-to-r from-white to-white ">
       <Hero />
       <DashboardSection />
-      {/* <VideoTestimonial/> */}
+      {/* <VideoTestimonial /> */}
       {/* <How /> */}
       {/* <ContactUs /> */}
       {/* <MeetTheCreator /> */}

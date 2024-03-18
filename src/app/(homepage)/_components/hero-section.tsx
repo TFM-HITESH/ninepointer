@@ -72,14 +72,14 @@ const Hero = () => {
       </div>
       {userId ? null : (
         <div className="flex gap-4 flex-col md:flex-row p-4 w-full max-w-7xl mx-auto items-center justify-center cursor-pointer">
-          <Link href="/sign-in" className="w-full md:w-1/5  h-10">
-            <Button className="w-full bg-gradient-to-b from-blue-500 to-blue-600  ">
+          <Link href="/sign-in" className="w-full md:w-1/5  h-10 z-10">
+            <Button className="w-full bg-gradient-to-b from-red-500 to-red-600  ">
               Get Started
             </Button>
           </Link>
           <Link href="/sign-up" className="w-full md:w-1/5  h-10">
             <button className="p-[3px] relative w-full h-10">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg" />
+              <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-red-600 rounded-lg" />
               <div className="px-4 py-1  bg-white rounded-[6px]  relative group transition duration-200 text-black hover:text-white hover:bg-transparent">
                 Sign Up
               </div>
