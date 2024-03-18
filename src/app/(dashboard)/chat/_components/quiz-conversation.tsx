@@ -28,7 +28,7 @@ function QuizConversation({
         className=" cursor-pointer h-12 flex items-center justify-center outline outline-2 outline-blue-400 text-center outline-offset-2 rounded-lg text-xs hover:shadow-lg px-2 group transition-all duration-200 font-bold text-white   hover:text-white hover:scale-110 border-[0.15rem] hover:-translate-y-1 border-black bg-black"
         onClick={(event) => {
           const messageText =
-            "Give me one objective type question related to the previous content. Do not change the context and stay relevant to the topic. Keep track of the previous questions and make sure that you never repeat a question. The user will answer them. Tell me if they are right or wrong in a detailed way with proper structuring. Make sure you explain why a user's answer is wrong.";
+            "Give me one objective type question related to the previous content. Do not change the context and stay relevant to the topic. Keep track of the previous questions and make sure that you never repeat a question. I will answer them. Tell me if they are right or wrong in a detailed way with proper structuring. Make sure you explain why my answer is wrong.";
           createMessage({ fileId, collection, message: messageText as string });
           setAiThinking(true);
         }}

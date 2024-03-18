@@ -41,38 +41,7 @@ const Question = ({ id, collection }: questionProps) => {
   };
   return (
     <div className="md:w-5/12 w-full flex flex-col items-center justify-center relative shadow-inner">
-      <div className="flex flex-row w-full px-2 items-center justify-center shadow-inner p-2 my-auto">
-        <div className="w-1/3">
-          <QuizConversation
-            setAiThinking={setAiThinking}
-            fileId={id}
-            collection={collection}
-            refetchMessages={refetchMessages}
-          />
-        </div>
-
-        <form className="w-full flex h-full p-2" onSubmit={handleSendMessage}>
-          <Textarea
-            placeholder="Ask a question about your upload"
-            value={input}
-            required
-            onChange={(e) => setInput(e.target.value)}
-            rows={0}
-            maxRows={4}
-            autoFocus
-            className="w-full h-12 max-h-12 text-sm p-3 bg-gray-300 z-20 relative items-center text-wrap outline-none overflow-x-scroll overflow-y-hidden outline-2 outline-blue-500 outline-offset-2 focus:outline-none focus:ring focus:border-blue-500 resize-none scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch rounded-md border-none m-1"
-          />
-
-          <button
-            disabled={isAiThinking}
-            type="submit"
-            className="ml-2 h-full rounded-md z-20 bg-gradient-to-r from-blue-500 to-blue-700 p-2 w-16  flex items-center justify-center text-white group transition-all duration-200 font-bold text-xl  hover:text-white hover:scale-110 border-[0.15rem] hover:-translate-y-1 border-black"
-          >
-            {isAiThinking ? <PuffLoader color="white" size={25} /> : "Ask"}
-          </button>
-        </form>
-      </div>
-      <div className="w-full flex flex-col items-center justify-center h-full ">
+      <div className="w-full flex flex-col items-center justify-center h-3/4 mt-0 mb-0">
         {messages?.length === 0 && !isAiThinking ? (
           <>
             <div className=" w-1/3 text-xs text-center text-slate-500 flex flex-col items-center">
@@ -99,6 +68,38 @@ const Question = ({ id, collection }: questionProps) => {
             isAiThinking={isAiThinking}
           />
         )}
+      </div>
+
+      <div className="flex flex-row w-full px-2 items-center justify-center shadow-inner p-2 mb-6">
+        <div className="w-1/3">
+          <QuizConversation
+            setAiThinking={setAiThinking}
+            fileId={id}
+            collection={collection}
+            refetchMessages={refetchMessages}
+          />
+        </div>
+
+        <form className="w-full flex h-full p-2" onSubmit={handleSendMessage}>
+          <Textarea
+            placeholder="Ask a question about your upload"
+            value={input}
+            required
+            onChange={(e) => setInput(e.target.value)}
+            rows={0}
+            maxRows={1}
+            autoFocus
+            className="w-full h-12 max-h-12 text-sm p-3 bg-gray-300 z-20 relative items-center text-wrap outline-none overflow-x-scroll overflow-y-hidden outline-2 outline-blue-500 outline-offset-2 focus:outline-none focus:ring focus:border-blue-500 resize-none scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch rounded-md border-none m-1"
+          />
+
+          <button
+            disabled={isAiThinking}
+            type="submit"
+            className="ml-2 h-full rounded-md z-20 bg-gradient-to-r from-red-700 to-red-900 p-2 w-16  flex items-center justify-center text-white group transition-all duration-200 font-bold text-xl  hover:text-white hover:scale-110 border-[0.15rem] hover:-translate-y-1 border-black"
+          >
+            {isAiThinking ? <PuffLoader color="white" size={25} /> : "Ask"}
+          </button>
+        </form>
       </div>
     </div>
   );

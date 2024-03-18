@@ -6,6 +6,7 @@ import {
   KeyConceptProps,
   Message,
 } from "@/types/chat/chat-types";
+import Navbar from "./navbar";
 const MainScreen = ({
   url,
   detailedSummary,
@@ -17,6 +18,7 @@ const MainScreen = ({
 }: MainScreenProps) => {
   return (
     <div className="w-full h-full flex justify-between z-0">
+      {/* <Navbar /> */}
       <BackgroundCircle
         radius="15%"
         position={{ top: "55%", left: "25%" }}
@@ -75,7 +77,7 @@ const MainScreen = ({
           description={description}
         />
       </div>
-      <div className="bg-gray-900 w-[2px]  hidden md:block"></div>
+      {/* <div className="bg-gray-900 w-[2px]  hidden md:block"></div> */}
       <Question id={id} collection={collection} />
     </div>
   );
