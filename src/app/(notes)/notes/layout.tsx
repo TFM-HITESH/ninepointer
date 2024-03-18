@@ -1,11 +1,10 @@
-import Navbar from '../_components/navbar'
-import DashboardSidebar from '../_components/sidebar'
+import Navbar from "../_components/navbar";
+import DashboardSidebar from "../_components/sidebar";
 
-
-export async function generateMetadata(){
+export async function generateMetadata() {
   return {
-    title:"Dashboard"
-  }
+    title: "Dashboard",
+  };
 }
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -16,7 +15,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
         {children}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default DashboardLayout
+export default DashboardLayout;

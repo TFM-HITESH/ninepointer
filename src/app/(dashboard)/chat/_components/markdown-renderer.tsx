@@ -34,7 +34,7 @@ function MarkdownRenderer({
   }
   return (
     <div
-      className="text-base p-3 bg-gradient-to-t from-slate-200 w-full to-slate-100 rounded-md "
+      className="text-base p-3 bg-[#e5d6c4] w-full border border-gray-900 rounded-md "
       id="content"
     />
   );

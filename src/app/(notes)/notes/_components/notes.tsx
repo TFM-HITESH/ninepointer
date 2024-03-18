@@ -15,10 +15,10 @@ import { toast } from "sonner";
 import { File, FolderClosed, Trash2Icon } from "lucide-react";
 import { format } from "date-fns";
 import { ConfirmModal } from "@/components/modals/confirm-modal";
-import { FolderProps } from "@/types/folder/folder-types";
+import { FolderProps, NotesProps } from "@/types/folder/folder-types";
 import { api } from "@/trpc/react";
 // import EditModal from "./folderModal/edit-modal";
-const Notes = ({ id, title, description, createdAt }: FolderProps) => {
+const Notes = ({ id, title, description, createdAt, link }: NotesProps) => {
   //   const { mutate: deleteFolder } = api.folder.deleteFolder.useMutation({
   //     onSuccess: () => {
   //       toast.success("Folder Deleted successfully");
@@ -111,10 +111,12 @@ const Notes = ({ id, title, description, createdAt }: FolderProps) => {
       <div className="border-t-2 border-t-gray-600 w-5/6 bg-[#e5d6c4] flex justify-between rounded-b-md mt-3 py-3   items-center ">
         <div className="text-black flex hover:scale-105 hover:-translate-y-1 transition-all duration-150 sm:bg-[#adada7b1] md:bg-transparent hover:bg-[#adada7b1] ease-in-out p-1 rounded-lg">
           {" "}
-          <span className="font-bold text-lg px-1 "> Created on :</span>{" "}
-          <span className="text-lg font-bold text-gray-700 px-1">Hello</span>{" "}
+          <span className="font-bold text-lg px-1 "> Created by :</span>{" "}
+          <span className="text-lg font-bold text-gray-700 px-1">
+            {createdAt}
+          </span>{" "}
         </div>
-        <Link href={`/dashboard/folder/${id}`}>
+        <Link href={link} target="_blank">
           <button className="p-[3px] relative">
             {/* <div className="absolute inset-0 bg-black rounded-lg" /> */}
             <div className="px-4 py-1  bg-black rounded-[6px]  relative group transition-all duration-200 font-bold text-white text-xl  hover:text-white hover:scale-110 border-[0.15rem] hover:-translate-y-1 border-black ">

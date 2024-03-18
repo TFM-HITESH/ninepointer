@@ -17,3 +17,11 @@ export interface Folder {
     description: string;
     createdAt: string;
   }
+
+  export interface NotesProps {
+    id: string;
+    title: string;
+    description: string;
+    createdAt: string;
+    link: string, 
+  }

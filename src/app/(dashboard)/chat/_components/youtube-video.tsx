@@ -24,14 +24,13 @@ const Youtube = ({ URL, title, description }: YoutubeProps) => {
         controls={true}
       />
       <div className="text-2xl  font-bold p-2 "> {title} </div>
-      <div className="w-full bg-slate-200 rounded-lg p-2 border-2 border-slate-400">
+      <div className="w-full bg-[#e5d6c4] rounded-lg p-2 border-2 border-gray-900">
         <div className={`${showMore ? "block" : "truncate"} text-justify`}>
-        <MarkdownRenderer content={description} isVideoDescription={true}  />
-
+          <MarkdownRenderer content={description} isVideoDescription={true} />
         </div>
         {!showMore && (
           <button
-            className="text-blue-500 mt-2"
+            className="text-red-800 mt-2"
             onClick={() => setShowMore(true)}
           >
             ...more
@@ -39,7 +38,7 @@ const Youtube = ({ URL, title, description }: YoutubeProps) => {
         )}
         {showMore && (
           <button
-            className="text-blue-500 mt-2"
+            className="text-red-800 mt-2"
             onClick={() => setShowMore(false)}
           >
             Show less

@@ -63,7 +63,11 @@ const Question = ({ id, collection }: questionProps) => {
             className="w-full h-12 max-h-12 text-sm p-3 bg-gray-300 z-20 relative items-center text-wrap outline-none overflow-x-scroll overflow-y-hidden outline-2 outline-blue-500 outline-offset-2 focus:outline-none focus:ring focus:border-blue-500 resize-none scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch rounded-md border-none m-1"
           />
 
-          <button className="ml-2 h-full rounded-md z-20 bg-gradient-to-r from-blue-500 to-blue-700 p-2 w-16  flex items-center justify-center text-white group transition-all duration-200 font-bold text-xl  hover:text-white hover:scale-110 border-[0.15rem] hover:-translate-y-1 border-black">
+          <button
+            disabled={isAiThinking}
+            type="submit"
+            className="ml-2 h-full rounded-md z-20 bg-gradient-to-r from-blue-500 to-blue-700 p-2 w-16  flex items-center justify-center text-white group transition-all duration-200 font-bold text-xl  hover:text-white hover:scale-110 border-[0.15rem] hover:-translate-y-1 border-black"
+          >
             {isAiThinking ? <PuffLoader color="white" size={25} /> : "Ask"}
           </button>
         </form>

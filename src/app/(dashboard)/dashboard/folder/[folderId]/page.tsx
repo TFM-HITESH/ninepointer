@@ -99,7 +99,7 @@ const FolderPage = ({ params }: any) => {
           isFileLoading={fileLoading}
         />
       </div>
-      <Separator className="bg-gray-400 w-full" />
+      {/* <Separator className="bg-gray-400 w-full" /> */}
 
       {fileLoading ? (
         <FileSkeleton />

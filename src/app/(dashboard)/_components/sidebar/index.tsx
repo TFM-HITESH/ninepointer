@@ -29,7 +29,7 @@ const DashboardSidebar = () => {
               : ""
           }  `}
         >
-          <Image src="/blue-folder.svg" alt="folder" width={25} height={25} />
+          <Image src="/black-folder.svg" alt="folder" width={25} height={25} />
           Folders
         </Link>
 
@@ -41,7 +41,7 @@ const DashboardSidebar = () => {
               : ""
           }  `}
         >
-          <Image src="/blue-folder.svg" alt="folder" width={25} height={25} />
+          <Image src="/notes.svg" alt="folder" width={25} height={25} />
           <p className="">Notes</p>
         </Link>
         {/* <Link

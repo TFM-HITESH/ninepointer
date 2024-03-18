@@ -93,38 +93,44 @@ const Dashboard = () => {
         <Notes
           id={""}
           title={"Java"}
-          description={"Java Notes created by Hitesh"}
-          createdAt={"Shreya"}
+          description={"Theory Notes"}
+          createdAt={"Shreya Gupta"}
+          link="https://drive.google.com/file/d/1GLvZ92FMBaBiSPXIINevB5_70Rsa7r-H/view"
         />
         <Notes
           id={""}
-          title={"OOPS"}
-          description={"Java Notes created by Hitesh"}
-          createdAt={"Shreya"}
+          title={"Physics Lab"}
+          description={"Lab Notes"}
+          createdAt={"Shreya Gupta"}
+          link="https://drive.google.com/file/d/12WEmo5aNc_mxlrpctZi1vo104sEIEM0n/view"
         />
         <Notes
           id={""}
           title={"Python"}
-          description={"Java Notes created by Hitesh"}
-          createdAt={"Shreya"}
+          description={"Java Notes"}
+          createdAt={"Shreya Gupta"}
+          link="\"
         />
         <Notes
           id={""}
           title={"Complex Math"}
-          description={"Java Notes created by Hitesh"}
-          createdAt={"Shreya"}
+          description={"Java Notes"}
+          createdAt={"Hitesh Shivkumar"}
+          link="\"
         />
         <Notes
           id={""}
           title={"DSD"}
-          description={"Java Notes created by Hitesh"}
-          createdAt={"Shreya"}
+          description={"Java Notes"}
+          createdAt={"Shreya Gupta"}
+          link="\"
         />
         <Notes
           id={""}
           title={"Random"}
-          description={"Java Notes created by Hitesh"}
-          createdAt={"Shreya"}
+          description={"Java Notes"}
+          createdAt={"Hitesh Shivkumar"}
+          link="\"
         />
       </div>
     </div>

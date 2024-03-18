@@ -53,7 +53,7 @@ const Tabs = ({
         {tabs.map((tab) => (
           <div
             key={tab.title}
-            className={`flex font-semibold items-center cursor-pointer rounded-t-2xl h-8 p-2 border-2 border-b-0 border-gray-400 hover:scale-110 hover:bg-zinc-300 hover:text-black transition-all duration-150 ease-in-out ${
+            className={`flex font-semibold items-center cursor-pointer rounded-t-2xl h-8 p-2 border-2 border-b-0 border-gray-400 hover:scale-110 hover:bg-[#927e6b] hover:text-black transition-all duration-150 ease-in-out ${
               activeTab === tab.title
                 ? "bg-gray-900 border-none text-white  "
                 : ""
@@ -65,7 +65,7 @@ const Tabs = ({
           </div>
         ))}
       </div>
-      <div className="max-h-screen overflow-y-auto p-3 border-t-2 border-gray-400  pb-36">
+      <div className="max-h-screen overflow-y-auto p-3 border-t-2 border-gray-900  pb-36">
         {tabs.map(
           (tab) =>
             activeTab === tab.title && (
