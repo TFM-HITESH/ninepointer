@@ -107,7 +107,7 @@ function FileUploadModal({ folderId, isFileLoading }: FileUploadModalProps) {
               </p>
               <DialogDescription className="flex flex-col items-center justify-center py-10">
                 <BounceLoader color="#357AF3" />
-                <div className="mt-10 text-blue-800">
+                <div className="mt-10 text-black">
                   Your video is processing...
                 </div>
               </DialogDescription>
@@ -164,7 +164,7 @@ function FileUploadModal({ folderId, isFileLoading }: FileUploadModalProps) {
                     <span className="tracking-tighter">
                       {" "}
                       <span className="underline">Disclaimer</span> - Please
-                      make sure that you have your faculty's permission to
+                      make sure that you have your faculty&apos;s permission to
                       record their lectures ! We are not responsible for any
                       action taken.{" "}
                     </span>{" "}

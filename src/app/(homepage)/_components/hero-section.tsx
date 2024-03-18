@@ -68,7 +68,7 @@ const Hero = () => {
         got you covered.
       </div>
       <div className="md:text-xl text-lg text-slate-600 md:text-center text-center font-semibold md:px-40 w-full p-4 mx-auto">
-        An AI-assisted chatbot for faster learning and better communication.
+        Helping everybody achieve their dream of being a 9 Pointer.
       </div>
       {userId ? null : (
         <div className="flex gap-4 flex-col md:flex-row p-4 w-full max-w-7xl mx-auto items-center justify-center cursor-pointer">
