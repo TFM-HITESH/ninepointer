@@ -59,13 +59,10 @@ function CreateFolderModal() {
     <>
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger className="flex items-center justify-center">
-          <Button
-            variant="open"
-            className=" font-zen font-extrabold text-3xl px-3 h-12 bg-red-500 hover:scale-105 "
-          >
+          <button className=" flex flex-row justify-center items-center bg-red-900 font-zen font-extrabold text-3xl px-3 h-12  hover:scale-110 rounded-full transition-all duration-150 ease-in-out border-b-4 border-black hover:border-white text-[#feeedd]  ">
             <PlusCircle className="h-6 w-6 m-1" />
             <p className="m-1">Create Folder</p>
-          </Button>
+          </button>
         </DialogTrigger>
 
         <DialogContent className=" lg:w-[30%] ">

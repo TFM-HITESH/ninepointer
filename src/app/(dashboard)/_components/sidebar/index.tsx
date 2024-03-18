@@ -13,19 +13,19 @@ const DashboardSidebar = () => {
   useEffect(() => {}, [pathname]);
   return (
     <>
-      <aside className="fixed z-20 hidden left-0 py-3 px-1  text-muted-foreground bg-white h-full shadow-lg  w-28 lg:flex flex-col gap-y-3 items-center">
+      <aside className="fixed z-20 hidden left-0 py-3 px-1  text-muted-foreground bg-white/5 rounded-r-[15px] h-full shadow-2xl w-28 lg:flex flex-col gap-y-3 items-center">
         <Link
           href="/"
           className="text-black h-9 w-28 text-center flex justify-center items-center p-2 mt-2 mb-2"
         >
           <Logo />
         </Link>
-        <div className=" w-5/6 rounded-full h-[2px] flex bg-gray-700 items-center justify-center"></div>
+        <div className=" w-5/6 rounded-full h-[2px] flex bg-transparent items-center justify-center"></div>
         <Link
           href="/dashboard"
           className={`flex flex-col gap-4 p-1 items-center justify-start  cursor-pointer mt-5 hover:bg-opacity-40 w-28  ${
             pathname === "/dashboard"
-              ? "border-r-4 border-blue-600 text-blue-600 "
+              ? "border-r-4 border-[#5c2f24] text-black "
               : ""
           }  `}
         >
@@ -37,7 +37,7 @@ const DashboardSidebar = () => {
           href="/notes"
           className={`flex flex-col gap-4 p-1 items-center justify-start  cursor-pointer mt-5 hover:bg-opacity-40 w-28  ${
             pathname === "/notes"
-              ? "border-r-4 border-blue-600 text-blue-600 "
+              ? "border-r-4 border-[#5c2f24] text-black "
               : ""
           }  `}
         >

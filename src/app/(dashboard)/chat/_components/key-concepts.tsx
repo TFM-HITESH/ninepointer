@@ -16,9 +16,9 @@ export default function KeyConcepts({
 }) {
   return (
     <div className="grid gap-6 lg:grid-cols-2">
-      <Card className="bg-gradient-to-br from-purple-300 to-purple-400 dark:bg-purple-800  cursor-pointer relative overflow-hidden group">
+      <Card className="bg-gradient-to-br from-purple-300 to-purple-400 dark:bg-purple-800  cursor-pointer relative overflow-hidden group hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 ease-in-out">
         <CardHeader>
-          <CardTitle className="text-purple-600 dark:text-purple-300">
+          <CardTitle className="text-purple-600 dark:text-purple-300 hover:translate-x-1 transition-all duration-100 ease-in-out">
             {concepts[0].concept}
           </CardTitle>
           <CardDescription className="text-purple-600 dark:text-purple-400">
@@ -32,9 +32,9 @@ export default function KeyConcepts({
         </CardContent>
       </Card>
 
-      <Card className="bg-gradient-to-br from-yellow-300 to-yellow-400 dark:bg-yellow-800  cursor-pointer relative overflow-hidden group">
+      <Card className="bg-gradient-to-br from-yellow-300 to-yellow-400 dark:bg-yellow-800  cursor-pointer relative overflow-hidden group hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 ease-in-out">
         <CardHeader>
-          <CardTitle className="text-yellow-700 dark:text-yellow-300">
+          <CardTitle className="text-yellow-700 dark:text-yellow-300 hover:translate-x-1 transition-all duration-100 ease-in-out">
             {concepts[1].concept}
           </CardTitle>
           <CardDescription className="text-yellow-600 dark:text-yellow-400">
@@ -47,9 +47,9 @@ export default function KeyConcepts({
           </p>
         </CardContent>
       </Card>
-      <Card className="bg-gradient-to-br from-green-300 to-green-400 dark:bg-green-800  cursor-pointer relative overflow-hidden group">
+      <Card className="bg-gradient-to-br from-green-300 to-green-400 dark:bg-green-800  cursor-pointer relative overflow-hidden group hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 ease-in-out">
         <CardHeader>
-          <CardTitle className="text-green-700 dark:text-green-300">
+          <CardTitle className="text-green-700 dark:text-green-300 hover:translate-x-1 transition-all duration-100 ease-in-out">
             {concepts[2].concept}
           </CardTitle>
           <CardDescription className="text-green-600 dark:text-green-400">
@@ -62,9 +62,9 @@ export default function KeyConcepts({
           </p>
         </CardContent>
       </Card>
-      <Card className="bg-gradient-to-br from-blue-300 to-blue-400 dark:bg-blue-800  cursor-pointer relative overflow-hidden group">
+      <Card className="bg-gradient-to-br from-blue-300 to-blue-400 dark:bg-blue-800  cursor-pointer relative overflow-hidden group hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 ease-in-out">
         <CardHeader>
-          <CardTitle className="text-blue-700 dark:text-blue-300">
+          <CardTitle className="text-blue-700 dark:text-blue-300 hover:translate-x-1 transition-all duration-100 ease-in-out">
             {concepts[3].concept}
           </CardTitle>
           <CardDescription className="text-blue-600 dark:text-blue-400">
@@ -77,9 +77,9 @@ export default function KeyConcepts({
           </p>
         </CardContent>
       </Card>
-      <Card className="bg-gradient-to-br from-red-300 to-red-400 dark:bg-red-800  cursor-pointer relative overflow-hidden group">
+      <Card className="bg-gradient-to-br from-red-300 to-red-400 dark:bg-red-800  cursor-pointer relative overflow-hidden group hover:shadow-xl transition-all hover:-translate-y-0.5 duration-200 ease-in-out">
         <CardHeader>
-          <CardTitle className="text-red-700 dark:text-red-300">
+          <CardTitle className="text-red-700 dark:text-red-300 hover:translate-x-1 transition-all duration-100 ease-in-out">
             {concepts[4].concept}
           </CardTitle>
           <CardDescription className="text-red-600 dark:text-red-400">
@@ -92,9 +92,9 @@ export default function KeyConcepts({
           </p>
         </CardContent>
       </Card>
-      <Card className="bg-gradient-to-br from-pink-300 to-pink-400 dark:bg-pink-800 cursor-pointer relative overflow-hidden group">
+      <Card className="bg-gradient-to-br from-pink-300 to-pink-400 dark:bg-pink-800 cursor-pointer relative overflow-hidden group hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 ease-in-out">
         <CardHeader>
-          <CardTitle className="text-pink-700 dark:text-pink-300">
+          <CardTitle className="text-pink-700 dark:text-pink-300 hover:translate-x-1 transition-all duration-100 ease-in-out">
             {concepts[5].concept}
           </CardTitle>
           <CardDescription className="text-pink-600 dark:text-pink-400">

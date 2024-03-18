@@ -25,19 +25,54 @@ const Dashboard = () => {
     localStorage.setItem("imgUrl", user?.user?.imageUrl as string);
   }
   return (
-    <div className="h-full flex flex-col md:items-center bg-[#f3f3f3] items-center w-full mx-auto text-black max-w-screen-2xl   ">
+    <div className="h-full flex flex-col md:items-center bg-[#cfcbc2] items-center w-full mx-auto text-black max-w-screen-2xl   ">
       <BackgroundCircle
-        radius="40%"
-        position={{ top: "65%", left: "75%" }}
-        color="#DBDDE7"
+        radius="15%"
+        position={{ top: "55%", left: "25%" }}
+        color="#7F4205"
+        opacity={0.3}
+        blur={120}
+      />
+      <BackgroundCircle
+        radius="20%"
+        position={{ top: "70%", left: "80%" }}
+        color="#824E09"
+        opacity={0.8}
+        blur={170}
+      />
+      <BackgroundCircle
+        radius="20%"
+        position={{ top: "15%", left: "65%" }}
+        color="#824E09"
         opacity={0.6}
+        blur={140}
+      />
+      <BackgroundCircle
+        radius="20%"
+        position={{ top: "70%", left: "50%" }}
+        color="#824E09"
+        opacity={0.5}
         blur={150}
       />
       <BackgroundCircle
-        radius="40%"
-        position={{ top: "50%", left: "0%" }}
-        color="#32e7f7"
-        opacity={0.6}
+        radius="10%"
+        position={{ top: "70%", left: "30%" }}
+        color="#a74d11"
+        opacity={1}
+        blur={150}
+      />
+      <BackgroundCircle
+        radius="25%"
+        position={{ top: "50%", left: "30%" }}
+        color="#9F5000"
+        opacity={0.4}
+        blur={120}
+      />
+      <BackgroundCircle
+        radius="45%"
+        position={{ top: "0%", left: "40%" }}
+        color="#a74d11"
+        opacity={0.3}
         blur={150}
       />
 
@@ -54,7 +89,7 @@ const Dashboard = () => {
       </div>
       <Separator className="bg-gray-700 rounded-full w-5/6 h-[3px] md:ml-[5%] my-[1%]" />
       {Folders?.length === 0 ? (
-        <div className="text-xl text-black mt-10 flex text-center items-center justify-center h-28 bg-white border-2 border-gray-400 rounded-lg shadow-xl md:w-[82%] w-[90%] mx-auto lg:ml-44">
+        <div className="text-xl z-20 text-black mt-10 flex text-center items-center justify-center h-28 bg-white border-2 border-gray-400 rounded-lg shadow-xl md:w-[82%] w-[90%] mx-auto lg:ml-44">
           👋 Welcome to NinePointer ! Create a folder.
         </div>
       ) : (

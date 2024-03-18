@@ -48,13 +48,15 @@ const Tabs = ({
     },
   ];
   return (
-    <div className="mt-8 p-2 ">
+    <div className="mt-2 p-2 ">
       <div className=" text-center  text-sm flex gap-[0.5px] items-center">
         {tabs.map((tab) => (
           <div
             key={tab.title}
-            className={`flex font-semibold items-center cursor-pointer rounded-t-2xl h-8 p-2 border-2 border-b-0 border-gray-400 ${
-              activeTab === tab.title ? "bg-gray-300 border-none  " : ""
+            className={`flex font-semibold items-center cursor-pointer rounded-t-2xl h-8 p-2 border-2 border-b-0 border-gray-400 hover:scale-110 hover:bg-zinc-300 hover:text-black transition-all duration-150 ease-in-out ${
+              activeTab === tab.title
+                ? "bg-gray-900 border-none text-white  "
+                : ""
             }`}
             onClick={() => setActiveTab(tab.title)}
           >
@@ -73,9 +75,8 @@ const Tabs = ({
                 ) : activeTab === "Key Concepts" ? (
                   <div className="mt-2 rounded-10  break-words">
                     <div className="flex flex-col items-end ">
-                      <div className=" items-end justify-end  rounded-lg p-2 mb-2 text-right ">
-                      </div>
-                      <div >
+                      <div className=" items-end justify-end  rounded-lg p-2 mb-2 text-right "></div>
+                      <div>
                         <KeyConcepts concepts={concepts} />
                       </div>
                     </div>

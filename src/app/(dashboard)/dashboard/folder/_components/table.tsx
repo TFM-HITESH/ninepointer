@@ -47,7 +47,7 @@ const FileTable = ({ data }: FileTableProps) => {
         </div>
       ) : (
         <Table className="rounded-md ">
-          <TableHeader className="bg-[#efede6d7] font-zen text-2xl text-black">
+          <TableHeader className="bg-[#e5d6c4] font-zen text-2xl text-black">
             <TableRow>
               <TableHead className="w-[50%] font-bold text-gray-900">
                 <p className="hover:translate-x-1 transition-all duration-100 ease-in-out">
@@ -81,7 +81,7 @@ const FileTable = ({ data }: FileTableProps) => {
                   <span>{file.name} </span>{" "}
                 </TableCell>
 
-                <TableCell className="hover:-translate-y-0.5 transition-all duration-100 ease-in-out">
+                <TableCell className="">
                   <Link
                     href={`/chat/${file.id}`}
                     className="hover:text-blue-700 cursor-pointer transition-all duration-100 ease-in-out"

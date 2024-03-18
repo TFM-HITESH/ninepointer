@@ -44,19 +44,19 @@ const Notes = ({ id, title, description, createdAt }: FolderProps) => {
   //   const formatDate = format(createdAt, "d MMM yyyy");
   return (
     <div
-      className={` font-zen h-64 w-full bg-[#efede6d7] ${getBorderColor()} hover: rounded-xl flex flex-col items-center justify-center cursor-pointer shadow-xl hover:shadow-2xl relative  border-[1.5px] border-b-[0.3rem] hover:border-b-[0.5rem]  hover:border-blue-700 hover:scale-105 transition-all duration-150 ease-in-out border-gray-900 mx-auto hover:-translate-y-2 `}
+      className={` font-zen h-48 w-full bg-[#e5d6c4] hover:border-red-900  hover: rounded-xl flex flex-col items-center justify-center cursor-pointer shadow-xl hover:shadow-2xl relative  border-[1.5px] border-b-[0.3rem] hover:border-b-[0.5rem] hover:scale-105 transition-all duration-150 ease-in-out border-gray-900 mx-auto hover:-translate-y-2 `}
     >
       <Sheet>
         <SheetTrigger>
-          <div className="  h-40 w-auto  flex flex-col justify-start items-center">
+          <div className="mt-auto w-full h-full flex flex-row px-3 justify-start items-center">
             <Image
               src="/notes.svg"
               alt="notes"
-              width={50}
-              height={50}
-              className="hover:scale-110 transition-all duration-150 ease-in-out"
+              width={35}
+              height={35}
+              className="hover:scale-110 transition-all duration-150 ease-in-out m-3"
             />
-            <div className="text-center mt-2 mb-2 text-4xl font-bold text-black">
+            <div className="text-center m-3 text-4xl font-bold text-black">
               {title}
             </div>
           </div>
@@ -108,7 +108,7 @@ const Notes = ({ id, title, description, createdAt }: FolderProps) => {
         </SheetContent>
       </Sheet>
 
-      <div className="border-t-2 border-t-gray-600 w-5/6 bg-[#efede6d7] flex justify-between rounded-b-md py-4   items-center absolute bottom-1 ">
+      <div className="border-t-2 border-t-gray-600 w-5/6 bg-[#e5d6c4] flex justify-between rounded-b-md mt-3 py-3   items-center ">
         <div className="text-black flex hover:scale-105 hover:-translate-y-1 transition-all duration-150 sm:bg-[#adada7b1] md:bg-transparent hover:bg-[#adada7b1] ease-in-out p-1 rounded-lg">
           {" "}
           <span className="font-bold text-lg px-1 "> Created on :</span>{" "}

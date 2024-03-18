@@ -40,15 +40,18 @@ const Question = ({ id, collection }: questionProps) => {
     createMessage({ fileId: id, message: question, collection });
   };
   return (
-    <div className="md:w-5/12 w-full flex flex-col items-center justify-center relative  shadow-inner">
-      <div className="absolute w-9/12 top-8 items-center justify-center shadow-inner">
-        <form className="w-full flex h-7" onSubmit={handleSendMessage}>
+    <div className="md:w-5/12 w-full flex flex-col items-center justify-center relative shadow-inner">
+      <div className="flex flex-row w-full px-2 items-center justify-center shadow-inner p-2 my-auto">
+        <div className="w-1/3">
           <QuizConversation
             setAiThinking={setAiThinking}
             fileId={id}
             collection={collection}
             refetchMessages={refetchMessages}
           />
+        </div>
+
+        <form className="w-full flex h-full p-2" onSubmit={handleSendMessage}>
           <Textarea
             placeholder="Ask a question about your upload"
             value={input}
@@ -57,13 +60,10 @@ const Question = ({ id, collection }: questionProps) => {
             rows={0}
             maxRows={4}
             autoFocus
-            className="w-full text-sm p-3 pr-14 bg-gray-300 z-20 relative items-center outline-none outline-2 outline-blue-500 outline-offset-2 focus:outline-none focus:ring focus:border-blue-500 resize-none scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch rounded-md border-none"
+            className="w-full h-12 max-h-12 text-sm p-3 bg-gray-300 z-20 relative items-center text-wrap outline-none overflow-x-scroll overflow-y-hidden outline-2 outline-blue-500 outline-offset-2 focus:outline-none focus:ring focus:border-blue-500 resize-none scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch rounded-md border-none m-1"
           />
-          <button
-            disabled={isAiThinking}
-            type="submit"
-            className="rounded-md z-20 bg-gradient-to-r from-blue-500 to-blue-700 p-2 w-16 absolute right-1 top-[2px] flex items-center justify-center  text-white"
-          >
+
+          <button className="ml-2 h-full rounded-md z-20 bg-gradient-to-r from-blue-500 to-blue-700 p-2 w-16  flex items-center justify-center text-white group transition-all duration-200 font-bold text-xl  hover:text-white hover:scale-110 border-[0.15rem] hover:-translate-y-1 border-black">
             {isAiThinking ? <PuffLoader color="white" size={25} /> : "Ask"}
           </button>
         </form>
@@ -71,7 +71,7 @@ const Question = ({ id, collection }: questionProps) => {
       <div className="w-full flex flex-col items-center justify-center h-full ">
         {messages?.length === 0 && !isAiThinking ? (
           <>
-            <div className=" w-1/3 text-xs text-center text-slate-500 flex flex-col items-center ">
+            <div className=" w-1/3 text-xs text-center text-slate-500 flex flex-col items-center">
               <Image
                 src="/message-chat-1.svg"
                 alt="chat"
