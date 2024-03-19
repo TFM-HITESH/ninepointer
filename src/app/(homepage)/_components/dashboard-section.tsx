@@ -9,7 +9,7 @@ const DashboardSection = () => {
           alt="dashboard"
           width={600}
           height={500}
-          className="rounded-lg z-20"
+          className="rounded-lg z-10"
         />
       </div>
     </>

@@ -15,7 +15,7 @@ export default function Home() {
       <DashboardSection />
       {/* <VideoTestimonial /> */}
       {/* <How /> */}
-      {/* <ContactUs /> */}
+      <ContactUs />
       <MeetTheCreator />
       <Banner />
       {/* <Footer /> */}

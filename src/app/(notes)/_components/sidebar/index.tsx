@@ -44,9 +44,21 @@ const DashboardSidebar = () => {
           <Image src="/notes.svg" alt="folder" width={25} height={25} />
           <p className="">Notes</p>
         </Link>
+
+        <Link
+          href="/quizzes"
+          className={`flex flex-col gap-4 p-1 items-center justify-start  cursor-pointer mt-5 hover:bg-opacity-40 w-28  ${
+            pathname === "/quizzes"
+              ? "border-r-4 border-[#5c2f24] text-black "
+              : ""
+          }  `}
+        >
+          <Image src="/quizlogo.png" alt="folder" width={25} height={25} />
+          <p className="">Quizzes</p>
+        </Link>
         {/* <Link
           href="/"
-          className="flex flex-col gap-4 p-1 items-center justify-start  cursor-pointer mt-5 "
+          className="flex flex-col gap-4 p-1 items-center juzstify-start  cursor-pointer mt-5 "
         >
           <WalletCards className="h-5 w-5 " fill="" /> Cards
         </Link> */}
