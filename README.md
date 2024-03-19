@@ -1,7 +1,4 @@
-# ninepointer -
-
-**ninepointer**
-
+# NinePointer 
 
 ## Introduction
 
