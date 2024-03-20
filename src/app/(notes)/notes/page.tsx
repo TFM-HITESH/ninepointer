@@ -92,7 +92,7 @@ const Dashboard = () => {
       <div className="grid md:grid-cols-3 grid-cols-1 gap-6 lg:pl-32  p-3 md:pb-10 pb-20 w-11/12 mt-3  ">
         <Notes
           id={""}
-          title={"Java"}
+          title={"Java Theory"}
           description={"Theory Notes"}
           createdAt={"Shreya Gupta"}
           link="https://drive.google.com/file/d/1GLvZ92FMBaBiSPXIINevB5_70Rsa7r-H/view"
@@ -106,24 +106,24 @@ const Dashboard = () => {
         />
         <Notes
           id={""}
-          title={"Python"}
-          description={"Java Notes"}
+          title={"DSA"}
+          description={"DSA Notes"}
           createdAt={"Shreya Gupta"}
-          link="\"
+          link="https://drive.google.com/file/d/15nnp76TcbTsbgyIPlQFPQfYhviA3iuuk/view?usp=sharing"
         />
         <Notes
           id={""}
-          title={"Complex Math"}
-          description={"Java Notes"}
+          title={"MPMC"}
+          description={"MPMC"}
           createdAt={"Hitesh Shivkumar"}
-          link="\"
+          link="https://drive.google.com/file/d/1slcOYwXRcVju3ATJ4By9zlmtVFnTm9Q_/view?usp=sharing"
         />
         <Notes
           id={""}
-          title={"DSD"}
-          description={"Java Notes"}
-          createdAt={"Shreya Gupta"}
-          link="\"
+          title={"Java Lab"}
+          description={"Java Lab Notes"}
+          createdAt={"Hitesh Shivkumar"}
+          link="https://drive.google.com/file/d/1IvsW20wZdHjHHvjd_1VxLooXiIJSRCjt/view?usp=sharing"
         />
         <Notes
           id={""}
