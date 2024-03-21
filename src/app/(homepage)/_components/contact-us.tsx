@@ -2,7 +2,8 @@ import { Button } from "@/components/ui/button";
 import { MoveRight } from "lucide-react";
 import Link from "next/link";
 const ContactUs = () => {
-  const email = "tharunravuru19844@gmail.com";
+  const email1 = "tharunravuru19844@gmail.com";
+  const email2 = "hitesh.shivkumar2022@vitstudent.ac.in";
   return (
     <div
       key="1"
